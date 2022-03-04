@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+        }
+
+        .grid-item {
+            font-family: 'kanitlight';
+            background-color: rgba(246, 242, 217, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            align-items: center;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            background-color: #9c7f7f;
+            color: white;
+            font-size: 25px;
+        }
+
+        table {
+            font-family: 'kanitlight';
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+ 
+
+.btn-default {
+    border-color: #fff;
+    color: #222;
+    background-color: #fff;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    border-color: #eee;
+    color: #222;
+    background-color: #eee;
+}
+
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    background-image: none;
+}
+
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.btn-default .badge {
+    color: #fff;
+    background-color: #222;
+}
+
+.btn-primary {
+    border-color: rgb(39, 71, 100);
+    color: #fff;
+    background-color: rgb(39, 71, 100);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    border-color: rgb(137, 224, 137);
+    color: rgb(3, 3, 3);
+    background-color: rgb(137, 224, 137);
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    border-color: yellowgreen;
+    background-color: yellowgreen;
+}
+
+.btn-primary .badge {
+    color: yellowgreen;
+    background-color: #fff;
+}
+
+
+.btn {
+    border-radius: 300px;
+    text-transform: uppercase;
+}
+
+.btn-lg {
+    padding: 15px 30px;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    color: #fff;
+    background: #222;
+}
+
+::selection {
+    text-shadow: none;
+    color: #fff;
+    background: #222;
+}
+
+img::selection {
+    color: #fff;
+    background: 0 0;
+}
+
+img::-moz-selection {
+    color: #fff;
+    background: 0 0;
+}
+
+.text-primary {
+    color: yellowgreen;
+}
+
+.bg-primary {
+    background-color: yellowgreen;
+}
+
+        
+    </style>
+    <title>Areias do Seixo</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    
+    <!-- <script src="./node_modules/web3/dist/web3.min.js">
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+</head>
+
+<body style="background-color: rgb(236, 229, 221);">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-primary btn-lg" >GITHUB สำหรับโค้ด</a>
+    <div class="container">
+        <h1 style="text-align:center">Areias do Seixo</h1>
+        <h3 style="text-align:center">โปรดเลือกห้องพักที่ท่านต้องการ</h3>
+        <div class="grid-container">
+            <!--hotel 1-->
+            <div class="grid-item">
+                <label class="label1">
+                    SHELTER</label>
+                <img src="img/shelter.jpg" width="500px" alt="SHELTER">
+                <div class="button">
+                    <button class="btn btn-primary btn-lg" id="document1"
+                        onclick="btnChoose('SHELTER',50000000000000)">Book Now</button>
+                </div>
+                <label>0.00005 ETH</label>
+            </div>
+            <!--hotel 2-->
+            <div class="grid-item">
+                <label class="label1">
+                    LOVE ROOMS</label>
+                <img src="img/LOVE ROOMS.jpg" width="500px" alt="LOVE ROOMS">
+                <div class="button">
+                    <button class="btn btn-primary btn-lg" id="document1"
+                        onclick="btnChoose('LOVE ROOMS',100000000000000)">Book Now</button>
+                </div>
+                <label>0.0001 ETH</label>
+            </div>
+            <!--hotel 3-->
+            <div class="grid-item">
+                <label class="label1">
+                     GOLD ROOMS</label>
+                <img src="img/GOLD ROOMS.jpg" width="500px" alt="GOLD ROOMS">
+                <div class="button">
+                    <button class="btn btn-primary btn-lg" id="document1"
+                        onclick="btnChoose('GOLD ROOMS',150000000000000)">Book Now</button>
+                </div>
+                <label>0.00015 ETH</label>
+            </div>
+            <!--hotel 4-->
+            <div class="grid-item">
+                <label class="label1">
+                    TREE ROOMS</label>
+                <img src="img/TREE ROOMS.jpg" width="500px" alt="TREE ROOMS">
+                <div class="button">
+                    <button class="btn btn-primary btn-lg" id="document1"
+                        onclick="btnChoose('TREE ROOMS',160000000000000)">Book Now</button>
+                </div>
+                <label>0.00016 ETH</label>
+            </div>
+            <!--hotel 5-->
+            <div class="grid-item">
+                <label class="label1">
+                    LAND ROOM</label>
+                <img src="img/LAND ROOM.jpg" width="500px" alt="LAND ROOM">
+                <div class="button">
+                    <button class="btn btn-primary btn-lg" id="document1"
+                        onclick="btnChoose('LAND ROOM',170000000000000)">Book Now</button>
+                </div>
+                <label>0.00017 ETH</label>
+            </div>
+            <!--hotel 6-->
+            <div class="grid-item">
+                <label class="label1">
+                    BLUE VILLAS</label>
+                <img src="img/BLUE VILLAS.jpg" width="500px" alt="BLUE VILLAS">
+                <div class="button">
+                    <button class="btn btn-primary btn-lg" id="document1" onclick="btnChoose('BLUE VILLAS',200000000000000)">
+                        Book Now</button>
+                </div>
+                <label>0.0002 ETH</label>
+            </div>
+            
+        </div>
+
+
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Room</th>
+                <th>Owner</th>
+            </tr>
+            <tr>
+                <td id="time1"> </td>
+                <td id="room1"> </td>
+                <td id="owner1"> </td>
+            </tr>
+            <tr>
+                <td id="time2"> </td>
+                <td id="room2"> </td>
+                <td id="owner2"> </td>
+            </tr>
+            <tr>
+                <td id="time3"> </td>
+                <td id="room3"> </td>
+                <td id="owner3"> </td>
+            </tr>
+            <tr>
+                <td id="time4"> </td>
+                <td id="room4"> </td>
+                <td id="owner4"> </td>
+            </tr>
+            <tr>
+                <td id="time5"> </td>
+                <td id="room5"> </td>
+                <td id="owner5"> </td>
+            </tr>
+            <tr>
+                <td id="time6"> </td>
+                <td id="room6"> </td>
+                <td id="owner6"> </td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+    </script>
+    <script>
+
+        async function loadWeb3() {
+            if (window.ethereum) {
+                window.web3 = new Web3(window.ethereum);
+                window.ethereum.enable();
+            }
+        }
+
+        let currentAccount = null;
+        window.ethereum
+            .request({ method: 'eth_accounts' })
+            .then(handleAccountsChanged)
+            .catch((err) => {
+                // Some unexpected error.
+                // For backwards compatibility reasons, if no accounts are available,
+                // eth_accounts will return an empty array.
+                console.error(err);
+            });
+
+        // Note that this event is emitted on page load.
+        // If the array of accounts is non-empty, you're already
+        // connected.
+        window.ethereum.on('accountsChanged', handleAccountsChanged);
+
+        // For now, 'eth_accounts' will continue to always return an array
+        function handleAccountsChanged(accounts) {
+            if (accounts.length === 0) {
+                // MetaMask is locked or the user has not connected any accounts
+                console.log('Please connect to MetaMask.');
+            } else if (accounts[0] !== currentAccount) {
+                currentAccount = accounts[0];
+                // Do any other work!
+            }
+        }
+
+        let abi = [
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
+                        "internalType": "address",
+                        "name": "owner",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "string",
+                        "name": "room",
+                        "type": "string"
+                    }
+                ],
+                "name": "Add",
+                "type": "event"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    }
+                ],
+                "name": "reserve",
+                "outputs": [],
+                "stateMutability": "payable",
+                "type": "function"
+            }
+        ];
+
+        async function loadContract() {
+            return await new window.web3.eth.Contract(abi, '0x71ef26806a84E944C5E40390DB9C4a0089f91a35');
+        }
+
+        async function load() {
+            await loadWeb3();
+            window.contract = await loadContract();
+            updateStatus('Ready!');
+        }
+
+        function updateStatus(status) {
+            const statusEl = document.getElementById('status');
+            statusEl.innerHTML = status;
+            console.log(status);
+        }
+
+        //const arr = [];
+        var i = 0;
+
+        function btnChoose(p, v) {
+            console.log(currentAccount);
+            window.contract.methods.reserve(p).send({ from: currentAccount, value: v }, function (error, result) {
+                $("#result").html(result);
+            });
+            window.contract.once("Add", {}, function (error, event) {
+                if (!error) {
+                    console.log(event);
+                    var h = new Date().getHours()
+                    var m = new Date().getMinutes()
+                    $("#result").html("Name:" + event.returnValues.room + "<br/>time:" + h + ":" + m + "<br/>owner:" + event.returnValues.owner);
+                    i++;
+                    $("#time" + i).html(h + ":" + m);
+                    $("#room" + i).html(event.returnValues.room);
+                    $("#owner" + i).html(event.returnValues.owner);
+                }
+            });
+        };
+        load();
+    </script>
+    
+    
+    
+</body>
+
+</html>
